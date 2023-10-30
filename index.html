@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraBooks</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -52,8 +53,46 @@
         <p class="banner__texto">Encontre em nossa estante o que precisa para o seu desenvolvimento</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será a sua próxima leitura">
     </section>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <!-- Slider main container -->
+
+        <div class="swiper">
+
+            <!-- Additional required wrapper -->
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/images/Arquitetura.svg"
+                        alt="Livro sobre Arquitetura de software da alura books."></div>
+                <div class="swiper-slide"><img src="assets/images/MetricasAgeis.svg" alt="Livro Metricas Ageis."></div>
+                <div class="swiper-slide"><img src="assets/images/Tuning.svg" alt="Livro Tuning"></div>
+                <div class="swiper-slide"><img src="assets/images/ApacheKafka.svg" alt="Livro sobre ApacheKafka"></div>
+                <div class="swiper-slide"><img src="assets/images/Gestão2.svg" alt="Livro sobre Gestão de times tech">
+                </div>
+            </div>
 
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            }
+        });
+    </script>
 </body>
 
 </html>
